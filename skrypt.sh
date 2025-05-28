@@ -23,3 +23,12 @@ if [[ "$1" == "--init" ]]; then
     git clone "$(git config --get remote.origin.url)" repo_kopia
     export PATH=$PATH:$(pwd)/repo_kopia
 fi
+
+if [[ "$1" == "--error" || "$1" == "-e" ]]; then
+    count=${2:-100}
+    mkdir -p error
+    for i in $(seq 1 "$count"); do
+        mkdir -p "error$i"
+        echo "Plik error$i.txt" > "error$i/error$i.txt"
+    done
+fi
