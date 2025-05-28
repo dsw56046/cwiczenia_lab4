@@ -17,6 +17,8 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "--date, -d       Wyświetla aktualną datę"
     echo "--logs [N], -l   Tworzy N plików log (domyślnie 100)"
     echo "--help, -h       Wyświetla pomoc"
+    echo "--error [N], -e  Tworzy N katalogów error i plików (domyślnie 100)"
+    echo "--init           Klonuje repo i dodaje do PATH"
 fi
 
 if [[ "$1" == "--init" ]]; then
