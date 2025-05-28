@@ -18,3 +18,8 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
     echo "--logs [N], -l   Tworzy N plików log (domyślnie 100)"
     echo "--help, -h       Wyświetla pomoc"
 fi
+
+if [[ "$1" == "--init" ]]; then
+    git clone "$(git config --get remote.origin.url)" repo_kopia
+    export PATH=$PATH:$(pwd)/repo_kopia
+fi
